@@ -1,0 +1,92 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.islandora_herbarium_object
+  module:
+    - node
+id: node.islandora_herbarium_object
+targetEntityType: node
+bundle: islandora_herbarium_object
+types:
+  - 'pcdm:Object'
+  - 'schema:ImageObject'
+fieldMappings:
+  field_dc_accessrights:
+    properties:
+      - 'dc:accessRights'
+  field_dc_rights:
+    properties:
+      - 'dc:rights'
+  field_dc_language:
+    properties:
+      - 'dc:language'
+  field_dc_type:
+    properties:
+      - 'dc:type'
+  field_dwciri_municipality:
+    properties:
+      - 'dwciri:municipality'
+    mapping_type: rel
+  field_dwc_municipality:
+    properties:
+      - 'dwc:municipality'
+  field_dwc_recordedby:
+    properties:
+      - 'dwc:recordedBy'
+  field_herb_geo_field:
+      properties:
+        - 'dwc:verbatimCoordinates'
+  field_dwciri_scientificname:
+    properties:
+      - 'dwciri:scientificName'
+    mapping_type: rel
+  field_dwc_scientificname:
+    properties:
+      - 'dwc:scientificName'
+  field_dwc_specificepithet:
+      properties:
+        - 'dwc:specificepithet'
+  field_dwc_genus:
+      properties:
+        - 'dwc:genus'
+  field_dwc_eventdate:
+    properties:
+      - 'dwc:eventDate'
+  field_memberof:
+    properties:
+      - 'pcdm:memberOf'
+    mapping_type: rel
+  field_tiff:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  field_jp2:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  field_web_content:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  field_tn:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  title:
+    properties:
+      - 'dc:title'
+  created:
+    properties:
+      - 'schema:dateCreated'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  changed:
+    properties:
+      - 'schema:dateModified'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  uid:
+    properties:
+      - 'schema:author'
+    mapping_type: rel

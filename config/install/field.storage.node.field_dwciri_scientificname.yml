@@ -1,0 +1,23 @@
+uuid: e803eab2-89a6-4a8e-a1d7-39cca02a7e9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: qR_Zl-07of0iVls__lNZIM8HAW_m_VZUTZCpXFsBnoU
+id: node.field_dwciri_scientificname
+field_name: field_dwciri_scientificname
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

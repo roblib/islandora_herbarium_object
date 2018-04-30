@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_rights
+    - node.type.islandora_herbarium_object
+id: node.islandora_herbarium_object.field_dc_rights
+field_name: field_dc_rights
+entity_type: node
+bundle: islandora_herbarium_object
+label: dc_rights
+description: 'Dublin Core Rights'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

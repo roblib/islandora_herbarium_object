@@ -1,0 +1,21 @@
+uuid: 4c76c744-19b2-41bb-b36a-3beeb6fd1941
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: TncWOq5nLgMGrYdUUN-YjUACaIZ-4gnX6UDymD4VrfU
+id: node.field_dwc_genus
+field_name: field_dwc_genus
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Contains islandora_pdf.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function islandora_herbarium_object_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the islandora_pdf module.
+    case 'help.page.islandora_herbarium':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Islandora Herbarium') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function islandora_herbarium_object_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+{
+  if ($entity->bundle() == 'islandora_herbarium_object') {
+    try {
+      $dwciri = $entity->get("field_dwciri_municipality")->getValue();
+      $geo = \Drupal::service('islandora_herbarium_object.geoparser');
+      $geo->getRemoteData($dwciri[0]['value']);
+      $geo->parseData();
+    } catch (Exception $e) {
+      watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
+      //todo drupal_set_message
+      return;
+    }
+    $entity->set('field_dwc_municipality',  $geo->data_arr['name']);
+    $entity->set('field_dwc_countrycode',  $geo->data_arr['countryCode']);
+    $entity->set('field_dwc_country',  $geo->data_arr['countryName']);
+    $entity->set('field_dwc_continent',  $geo->data_arr['countinentCode']);
+    $entity->set('field_dwc_decimallatitude',  $geo->data_arr['lat']);
+    $entity->set('field_dwc_decimallongitude',  $geo->data_arr['lng']);
+    $entity->set('field_dwc_stateprovince',  $geo->data_arr['adminName1']);
+    $point = array(
+        'lon' =>  $geo->data_arr['lng'],
+        'lat' =>  $geo->data_arr['lat'],
+      );
+    $geo_field_value = \Drupal::service('geofield.wkt_generator')->WktBuildPoint($point);
+    $entity->set('field_herb_geo_field', $geo_field_value);
+
+    try {
+      $taxoniri = $entity->get("field_dwciri_scientificname")->getValue();
+      $taxon = \Drupal::service('islandora_herbarium_object.taxonparser');
+      $taxon->getRemoteData($taxoniri[0]['value']);
+      $taxon->parseData();
+    } catch (Exception $e) {
+      watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
+      //todo drupal_set_message
+      return;
+    }
+    $entity->set('field_dwc_scientificname',  $taxon->data_arr['nameComplete']);
+    $entity->set('field_dwc_specificepithet',  $taxon->data_arr['specificEpithet']);
+    $entity->set('field_dwc_genus',  $taxon->data_arr['genusPart']);
+    // todo translate
+    $title =  $taxon->data_arr['nameComplete'] . ' - ' .  $geo->data_arr['name'];
+    if(!empty($title)) {
+      $entity->setTitle( $taxon->data_arr['nameComplete'] . ' - ' .  $geo->data_arr['name']);
+    }
+
+  }
+}

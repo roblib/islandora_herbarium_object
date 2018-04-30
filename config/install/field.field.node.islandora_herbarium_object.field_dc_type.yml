@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_type
+    - node.type.islandora_herbarium_object
+id: node.islandora_herbarium_object.field_dc_type
+field_name: field_dc_type
+entity_type: node
+bundle: islandora_herbarium_object
+label: dc_type
+description: 'dc:type'
+required: false
+translatable: false
+default_value:
+  -
+    value: occurence
+default_value_callback: ''
+settings: {  }
+field_type: string

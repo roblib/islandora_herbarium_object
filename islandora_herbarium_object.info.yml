@@ -1,0 +1,17 @@
+name: 'Islandora Herbarium Object'
+description: 'Provides Islandora Herbarium Object content type and related configuration. Islandora Herbarium Object'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - field
+  - link
+  - menu_ui
+  - node
+  - path
+  - rdf
+  - text
+  - user
+  - islandora_collection
+  - geofield_map
+  - openseadragon

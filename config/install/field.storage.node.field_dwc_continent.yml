@@ -1,0 +1,21 @@
+uuid: 29769d57-390b-4fbf-bbeb-4f98bc864cd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: j1o9X5rSjhtE-oWzxDl79JXolsRTg4ZmXMkSAU1Smps
+id: node.field_dwc_continent
+field_name: field_dwc_continent
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

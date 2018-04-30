@@ -1,0 +1,291 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.islandora_herbarium_object.body
+    - field.field.node.islandora_herbarium_object.field_dc_accessrights
+    - field.field.node.islandora_herbarium_object.field_dc_language
+    - field.field.node.islandora_herbarium_object.field_dc_rights
+    - field.field.node.islandora_herbarium_object.field_dc_type
+    - field.field.node.islandora_herbarium_object.field_dwc_class
+    - field.field.node.islandora_herbarium_object.field_dwc_continent
+    - field.field.node.islandora_herbarium_object.field_dwc_country
+    - field.field.node.islandora_herbarium_object.field_dwc_countrycode
+    - field.field.node.islandora_herbarium_object.field_dwc_decimallatitude
+    - field.field.node.islandora_herbarium_object.field_dwc_decimallongitude
+    - field.field.node.islandora_herbarium_object.field_dwc_eventdate
+    - field.field.node.islandora_herbarium_object.field_dwc_family
+    - field.field.node.islandora_herbarium_object.field_dwc_genus
+    - field.field.node.islandora_herbarium_object.field_dwc_kingdom
+    - field.field.node.islandora_herbarium_object.field_dwc_municipality
+    - field.field.node.islandora_herbarium_object.field_dwc_order
+    - field.field.node.islandora_herbarium_object.field_dwc_recordedby
+    - field.field.node.islandora_herbarium_object.field_dwc_scientificname
+    - field.field.node.islandora_herbarium_object.field_dwc_specificepithet
+    - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
+    - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
+    - field.field.node.islandora_herbarium_object.field_dwciri_municipality
+    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
+    - field.field.node.islandora_herbarium_object.field_herb_geo_field
+    - field.field.node.islandora_herbarium_object.field_jp2
+    - field.field.node.islandora_herbarium_object.field_tiff
+    - field.field.node.islandora_herbarium_object.field_tn
+    - field.field.node.islandora_herbarium_object.field_web_content
+    - node.type.islandora_herbarium_object
+  module:
+    - datetime
+    - geofield_map
+    - text
+    - user
+id: node.islandora_herbarium_object.default
+targetEntityType: node
+bundle: islandora_herbarium_object
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_dc_accessrights:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dc_language:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_rights:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dc_type:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dwc_continent:
+    type: basic_string
+    weight: 17
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_country:
+    type: basic_string
+    weight: 9
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_countrycode:
+    type: string
+    weight: 10
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_dwc_decimallatitude:
+    type: string
+    weight: 24
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_dwc_decimallongitude:
+    type: string
+    weight: 25
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_dwc_eventdate:
+    weight: 6
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_dwc_family:
+    type: basic_string
+    weight: 14
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_genus:
+    type: basic_string
+    weight: 15
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_kingdom:
+    type: basic_string
+    weight: 16
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_municipality:
+    weight: 8
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dwc_order:
+    type: basic_string
+    weight: 18
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_recordedby:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dwc_scientificname:
+    weight: 11
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dwc_specificepithet:
+    type: basic_string
+    weight: 13
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_stateprovince:
+    type: basic_string
+    weight: 19
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_dwc_vernacularname:
+    type: basic_string
+    weight: 12
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_herb_geo_field:
+    weight: 23
+    label: inline
+    settings:
+      gmap_api_key: ''
+      map_dimensions:
+        width: 100%
+        height: 450px
+      map_empty:
+        empty_behaviour: '0'
+        empty_message: 'No Geofield Value entered for this field'
+      map_center:
+        lat: '42'
+        lon: '12.5'
+        center_force: 0
+      map_zoom_and_pan:
+        zoom:
+          initial: 6
+          force: 0
+          min: 1
+          max: 22
+        scrollwheel: 1
+        draggable: 1
+        map_reset: 0
+      map_controls:
+        disable_default_ui: 0
+        zoom_control: 1
+        map_type_id: roadmap
+        map_type_control: 1
+        map_type_control_options_type_ids:
+          roadmap: roadmap
+          satellite: satellite
+          hybrid: hybrid
+          terrain: terrain
+        scale_control: 1
+        street_view_control: 1
+        fullscreen_control: 1
+      map_marker_and_infowindow:
+        icon_image_path: ''
+        infowindow_field: title
+        multivalue_split: 0
+        force_open: 0
+      map_oms:
+        map_oms_control: 1
+        map_oms_options: '{"markersWontMove": "true", "markersWontHide": "true", "basicFormatEvents": "true", "nearbyDistance": 3}'
+      map_additional_options: ''
+      custom_style_map:
+        custom_style_control: 0
+        custom_style_name: ''
+        custom_style_options: ''
+        custom_style_default: 0
+      map_markercluster:
+        markercluster_control: 0
+        markercluster_additional_options: ''
+    third_party_settings: {  }
+    type: geofield_google_map
+    region: content
+  field_jp2:
+    type: entity_reference_label
+    weight: 22
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_tn:
+    type: entity_reference_label
+    weight: 20
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_web_content:
+    type: entity_reference_label
+    weight: 21
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_dwc_class: true
+  field_dwciri_municipality: true
+  field_dwciri_scientificname: true
+  field_tiff: true

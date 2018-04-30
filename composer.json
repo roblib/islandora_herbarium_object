@@ -1,0 +1,17 @@
+{
+  "name": "islandora/islandora_herbarium_object",
+  "description": "Islandora Herbarium",
+  "type": "drupal-module",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "keywords": ["Drupal", "Islandora"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/roblib/islandora_herbarium_object",
+  "support": {
+    "issues": "https://github.com/islandora-claw/CLAW/issues",
+    "irc": "irc://irc.freenode.net/islandora"
+  },
+  "require": {
+    "islandora/islandora_collection": "dev-8.x-1.x"
+  }
+}

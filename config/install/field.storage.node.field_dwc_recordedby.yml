@@ -1,0 +1,21 @@
+uuid: ec4e9374-e1e1-4ace-9a92-66f99a69d4b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 5ca5kvghp0w38FCMdJo-s1Cb-_PUOY-g7iSdyCw9XFs
+id: node.field_dwc_recordedby
+field_name: field_dwc_recordedby
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

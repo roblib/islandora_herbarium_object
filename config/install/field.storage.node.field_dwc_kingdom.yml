@@ -1,0 +1,21 @@
+uuid: a579ab71-748e-44e6-ac3a-b2d7357292a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: KftAnAiNChcih8cf6HD-flz0Z8HiwZUZ_dWd274sPSk
+id: node.field_dwc_kingdom
+field_name: field_dwc_kingdom
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

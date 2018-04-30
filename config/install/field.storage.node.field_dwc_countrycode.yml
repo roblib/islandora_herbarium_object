@@ -1,0 +1,23 @@
+uuid: 8b847e7f-ee4c-44ac-85f9-e4bd85bb622d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: XK2tQyfYov8Er-bDdiZPjAIOV-bX-w0pRGtmaS9Q2-E
+id: node.field_dwc_countrycode
+field_name: field_dwc_countrycode
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

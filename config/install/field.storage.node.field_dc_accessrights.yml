@@ -1,0 +1,21 @@
+uuid: 490f9a2c-ea55-4406-9c9b-e8390b6d5389
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: epkRYesg00lvVbwbeSFv2gt3fMcfouOY4UVgdEh7li8
+id: node.field_dc_accessrights
+field_name: field_dc_accessrights
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

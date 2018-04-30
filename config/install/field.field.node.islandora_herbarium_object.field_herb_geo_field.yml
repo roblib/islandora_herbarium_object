@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_herb_geo_field
+    - node.type.islandora_herbarium_object
+  module:
+    - geofield
+id: node.islandora_herbarium_object.field_herb_geo_field
+field_name: field_herb_geo_field
+entity_type: node
+bundle: islandora_herbarium_object
+label: herb_geo_field
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

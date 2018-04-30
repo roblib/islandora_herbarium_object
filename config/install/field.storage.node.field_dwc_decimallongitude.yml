@@ -1,0 +1,23 @@
+uuid: a2957f0c-804d-4bd2-bf30-a3bd3ae08d04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: T6pKJtf5cumryyHPSS_vW8i0iPVHt1Ojfbkz_vx87WQ
+id: node.field_dwc_decimallongitude
+field_name: field_dwc_decimallongitude
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

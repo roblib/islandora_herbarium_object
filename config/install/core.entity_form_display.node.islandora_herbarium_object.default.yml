@@ -1,0 +1,200 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.islandora_herbarium_object.body
+    - field.field.node.islandora_herbarium_object.field_dc_accessrights
+    - field.field.node.islandora_herbarium_object.field_dc_language
+    - field.field.node.islandora_herbarium_object.field_dc_rights
+    - field.field.node.islandora_herbarium_object.field_dc_type
+    - field.field.node.islandora_herbarium_object.field_dwc_class
+    - field.field.node.islandora_herbarium_object.field_dwc_continent
+    - field.field.node.islandora_herbarium_object.field_dwc_country
+    - field.field.node.islandora_herbarium_object.field_dwc_countrycode
+    - field.field.node.islandora_herbarium_object.field_dwc_decimallatitude
+    - field.field.node.islandora_herbarium_object.field_dwc_decimallongitude
+    - field.field.node.islandora_herbarium_object.field_dwc_eventdate
+    - field.field.node.islandora_herbarium_object.field_dwc_family
+    - field.field.node.islandora_herbarium_object.field_dwc_genus
+    - field.field.node.islandora_herbarium_object.field_dwc_kingdom
+    - field.field.node.islandora_herbarium_object.field_dwc_municipality
+    - field.field.node.islandora_herbarium_object.field_dwc_order
+    - field.field.node.islandora_herbarium_object.field_dwc_recordedby
+    - field.field.node.islandora_herbarium_object.field_dwc_scientificname
+    - field.field.node.islandora_herbarium_object.field_dwc_specificepithet
+    - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
+    - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
+    - field.field.node.islandora_herbarium_object.field_dwciri_municipality
+    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
+    - field.field.node.islandora_herbarium_object.field_herb_geo_field
+    - field.field.node.islandora_herbarium_object.field_jp2
+    - field.field.node.islandora_herbarium_object.field_tiff
+    - field.field.node.islandora_herbarium_object.field_tn
+    - field.field.node.islandora_herbarium_object.field_web_content
+    - node.type.islandora_herbarium_object
+  module:
+    - datetime
+    - path
+id: node.islandora_herbarium_object.default
+targetEntityType: node
+bundle: islandora_herbarium_object
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dc_accessrights:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_dc_language:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_rights:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_dc_type:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dwc_eventdate:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_dwc_recordedby:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_dwciri_municipality:
+    type: string_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dwciri_scientificname:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jp2:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tn:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_web_content:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_dwc_class: true
+  field_dwc_continent: true
+  field_dwc_country: true
+  field_dwc_countrycode: true
+  field_dwc_decimallatitude: true
+  field_dwc_decimallongitude: true
+  field_dwc_family: true
+  field_dwc_genus: true
+  field_dwc_kingdom: true
+  field_dwc_municipality: true
+  field_dwc_order: true
+  field_dwc_scientificname: true
+  field_dwc_specificepithet: true
+  field_dwc_stateprovince: true
+  field_dwc_vernacularname: true
+  field_herb_geo_field: true
+  field_tiff: true
