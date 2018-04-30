@@ -16,24 +16,24 @@ class GeonamesParser extends DataParser
   {
     $xml_doc = new \DOMDocument();
     $xml_doc->loadXML($this->data);
-    parent::getXmlNodeValue($xml_doc, 'toponymName');
-    parent::getXmlNodeValue($xml_doc, 'name');
-    parent::getXmlNodeValue($xml_doc, 'lat');
-    parent::getXmlNodeValue($xml_doc, 'lng');
-    parent::getXmlNodeValue($xml_doc, 'geonameId');
-    parent::getXmlNodeValue($xml_doc, 'countryCode');
-    parent::getXmlNodeValue($xml_doc, 'countryName');
-    parent::getXmlNodeValue($xml_doc, 'fcodeName');
-    parent::getXmlNodeValue($xml_doc, 'toponymName');
-    parent::getXmlNodeValue($xml_doc, 'population');
-    parent::getXmlNodeValue($xml_doc, 'asciiName');
-    parent::getXmlNodeValue($xml_doc, 'elevation');
-    parent::getXmlNodeValue($xml_doc, 'continentCode');
-    parent::getXmlNodeValue($xml_doc, 'adminName1');
-    parent::getXmlNodeValue($xml_doc, 'timezone');
-    parent::getXmlNodeValue($xml_doc, 'west');
-    parent::getXmlNodeValue($xml_doc, 'north');
-    parent::getXmlNodeValue($xml_doc, 'east');
-    parent::getXmlNodeValue($xml_doc, 'south');
+    $this->getXmlNodeValue($xml_doc, 'toponymName');
+    $this->getXmlNodeValue($xml_doc, 'name');
+    $this->getXmlNodeValue($xml_doc, 'lat');
+    $this->getXmlNodeValue($xml_doc, 'lng');
+    $this->getXmlNodeValue($xml_doc, 'geonameId');
+    $this->getXmlNodeValue($xml_doc, 'countryCode');
+    $this->getXmlNodeValue($xml_doc, 'countryName');
+    $this->getXmlNodeValue($xml_doc, 'fcodeName');
+    $this->getXmlNodeValue($xml_doc, 'toponymName');
+    $this->getXmlNodeValue($xml_doc, 'population');
+    $this->getXmlNodeValue($xml_doc, 'asciiName');
+    $this->getXmlNodeValue($xml_doc, 'elevation');
+    $this->getXmlNodeValue($xml_doc, 'continentCode');
+    $this->getXmlNodeValue($xml_doc, 'adminName1');
+    $this->getXmlNodeValue($xml_doc, 'timezone');
+    $this->getXmlNodeValue($xml_doc, 'west');
+    $this->getXmlNodeValue($xml_doc, 'north');
+    $this->getXmlNodeValue($xml_doc, 'east');
+    $this->getXmlNodeValue($xml_doc, 'south');
   }
 }

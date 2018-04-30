@@ -14,8 +14,8 @@ class IpniParser extends DataParser
   public function parseData() {
     $xml_doc = new \DOMDocument();
     $xml_doc->loadXML($this->data);
-    parent::getXmlNodeValue($xml_doc, 'nameComplete');
-    parent::getXmlNodeValue($xml_doc, 'genusPart');
-    parent::getXmlNodeValue($xml_doc, 'specificEpithet');
+    $this->getXmlNodeValue($xml_doc, 'nameComplete');
+    $this->getXmlNodeValue($xml_doc, 'genusPart');
+    $this->getXmlNodeValue($xml_doc, 'specificEpithet');
   }
 }
