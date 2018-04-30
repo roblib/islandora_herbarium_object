@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains islandora_pdf.module.
+ * Contains islandora_herbarium.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
