@@ -26,7 +26,6 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
     - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
-    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
     - field.field.node.islandora_herbarium_object.field_jp2
     - field.field.node.islandora_herbarium_object.field_tiff
@@ -75,7 +74,6 @@ hidden:
   field_dwc_stateprovince: true
   field_dwc_vernacularname: true
   field_dwciri_municipality: true
-  field_dwciri_scientificname: true
   field_herb_geo_field: true
   field_jp2: true
   field_tiff: true

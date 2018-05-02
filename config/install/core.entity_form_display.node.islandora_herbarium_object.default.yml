@@ -101,16 +101,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_dwciri_scientificname:
-    weight: 12
+    weight: 26
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: string_textarea
     region: content
   field_jp2:
     type: entity_reference_autocomplete
     weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tiff:
+    type: entity_reference_autocomplete
+    weight: 18
     region: content
     settings:
       match_operator: CONTAINS
@@ -197,4 +206,3 @@ hidden:
   field_dwc_stateprovince: true
   field_dwc_vernacularname: true
   field_herb_geo_field: true
-  field_tiff: true

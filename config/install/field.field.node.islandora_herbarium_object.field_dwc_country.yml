@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dwc_country
 field_name: field_dwc_country
 entity_type: node
 bundle: islandora_herbarium_object
-label: 'dwc:country'
+label: Country
 description: ''
 required: false
 translatable: false

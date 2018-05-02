@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dwc_stateprovince
 field_name: field_dwc_stateprovince
 entity_type: node
 bundle: islandora_herbarium_object
-label: dwc_stateProvince
+label: 'State Province'
 description: ''
 required: false
 translatable: false

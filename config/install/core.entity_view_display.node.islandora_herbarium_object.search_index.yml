@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.islandora_herbarium_object.body
     - field.field.node.islandora_herbarium_object.field_dc_accessrights
     - field.field.node.islandora_herbarium_object.field_dc_language
@@ -25,7 +26,6 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
     - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
-    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
     - field.field.node.islandora_herbarium_object.field_jp2
     - field.field.node.islandora_herbarium_object.field_tiff
@@ -37,10 +37,10 @@ dependencies:
     - geofield_map
     - text
     - user
-id: node.islandora_herbarium_object.default
+id: node.islandora_herbarium_object.search_index
 targetEntityType: node
 bundle: islandora_herbarium_object
-mode: default
+mode: search_index
 content:
   body:
     label: hidden
@@ -198,13 +198,6 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_dwciri_scientificname:
-    weight: 27
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_herb_geo_field:
     weight: 1
     label: inline

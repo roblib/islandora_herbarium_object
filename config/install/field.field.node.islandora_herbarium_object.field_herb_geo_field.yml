@@ -10,7 +10,7 @@ id: node.islandora_herbarium_object.field_herb_geo_field
 field_name: field_herb_geo_field
 entity_type: node
 bundle: islandora_herbarium_object
-label: herb_geo_field
+label: 'Location (Point)'
 description: ''
 required: false
 translatable: false

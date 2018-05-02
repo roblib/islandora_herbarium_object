@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dc_rights
 field_name: field_dc_rights
 entity_type: node
 bundle: islandora_herbarium_object
-label: dc_rights
+label: Rights
 description: 'Dublin Core Rights'
 required: false
 translatable: false

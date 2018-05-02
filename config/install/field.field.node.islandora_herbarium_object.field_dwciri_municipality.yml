@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dwciri_municipality
 field_name: field_dwciri_municipality
 entity_type: node
 bundle: islandora_herbarium_object
-label: dwciri_municipality
+label: 'Municipality URI'
 description: ''
 required: false
 translatable: false

@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dwc_continent
 field_name: field_dwc_continent
 entity_type: node
 bundle: islandora_herbarium_object
-label: dwc_continent
+label: Continent
 description: ''
 required: false
 translatable: false

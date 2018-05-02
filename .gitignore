@@ -1,0 +1,10 @@
+config/install/core.entity_view_mode.node.teaser.yml
+config/install/field.storage.node.body.yml
+config/install/field.storage.node.field_jp2.yml
+config/install/field.storage.node.field_tiff.yml
+config/install/field.storage.node.field_tn.yml
+config/install/field.storage.node.field_web_content.yml
+config/install/media_entity.bundle.image_tiff.yml
+config/install/media_entity.bundle.jp2.yml
+config/install/media_entity.bundle.tn.yml
+config/install/media_entity.bundle.web_content.yml

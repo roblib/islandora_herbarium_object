@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dc_language
 field_name: field_dc_language
 entity_type: node
 bundle: islandora_herbarium_object
-label: dc_language
+label: Language
 description: ''
 required: false
 translatable: false

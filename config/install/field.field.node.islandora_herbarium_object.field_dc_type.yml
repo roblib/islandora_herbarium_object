@@ -8,7 +8,7 @@ id: node.islandora_herbarium_object.field_dc_type
 field_name: field_dc_type
 entity_type: node
 bundle: islandora_herbarium_object
-label: dc_type
+label: Type
 description: 'dc:type'
 required: false
 translatable: false
