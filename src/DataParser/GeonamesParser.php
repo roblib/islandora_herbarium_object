@@ -9,13 +9,15 @@
 namespace Drupal\islandora_herbarium_object\DataParser;
 
 
-class GeonamesParser extends DataParser
+class GeonamesParser extends XmlDataParser
 {
 
   public function parseData()
   {
     $xml_doc = new \DOMDocument();
-    $xml_doc->loadXML($this->data);
+    if(empty($xml_doc->loadXML($this->data))) {
+      throw new \Exception('Failed loading data as xml');
+    }
     $this->getXmlNodeValue($xml_doc, 'toponymName');
     $this->getXmlNodeValue($xml_doc, 'name');
     $this->getXmlNodeValue($xml_doc, 'lat');

@@ -9,7 +9,7 @@
 namespace Drupal\islandora_herbarium_object\DataParser;
 
 
-class IpniParser extends DataParser
+class IpniParser extends XmlDataParser
 {
   public function parseData() {
     $xml_doc = new \DOMDocument();

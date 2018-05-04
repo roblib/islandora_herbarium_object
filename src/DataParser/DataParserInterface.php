@@ -12,10 +12,15 @@ namespace Drupal\islandora_herbarium_object\DataParser;
 interface DataParserInterface
 {
 
-  public function getXmlNodeValue($xml_doc, $element_name);
-
-  public function getRemoteData($uri) ;
+  public function getRemoteData($uri);
 
   public function parseData();
+
+  /**
+   * Gets the value from an array based on it's key, elimnates warnings if key does not exist.
+   * @param $arr
+   * @param $key
+   */
+  public function getValue($key);
 
 }

@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwc_kingdom
     - field.field.node.islandora_herbarium_object.field_dwc_municipality
     - field.field.node.islandora_herbarium_object.field_dwc_order
+    - field.field.node.islandora_herbarium_object.field_dwc_phylum
     - field.field.node.islandora_herbarium_object.field_dwc_recordedby
     - field.field.node.islandora_herbarium_object.field_dwc_scientificname
     - field.field.node.islandora_herbarium_object.field_dwc_specificepithet
@@ -162,6 +163,13 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
+  field_dwc_phylum:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_dwc_recordedby:
     weight: 7
     label: inline
