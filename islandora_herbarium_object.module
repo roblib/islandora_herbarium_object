@@ -31,51 +31,12 @@ function islandora_herbarium_object_help($route_name, RouteMatchInterface $route
 function islandora_herbarium_object_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 {
   if ($entity->bundle() == 'islandora_herbarium_object') {
-    try {
-      $dwciri = $entity->get("field_dwciri_municipality")->getValue();
-      $geo = \Drupal::service('islandora_herbarium_object.geoparser');
-      $geo->getRemoteData($dwciri[0]['value']);
-      $geo->parseData();
-    } catch (Exception $e) {
-      watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
-      drupal_set_message(t('There was an error retrieving Municipality data. %msg. Verify the url is correct %ulr',
-        array('%msg'=> $e->getMessage(), '%url' => $dwciri[0]['value'])), 'error');
-      return;
-    }
-    $entity->set('field_dwc_municipality', $geo->getValue('name'));
-    $entity->set('field_dwc_countrycode',  $geo->getValue('countryCode'));
-    $entity->set('field_dwc_country',  $geo->getValue('countryName'));
-    $entity->set('field_dwc_continent',  $geo->getValue('countinentCode'));
-    $entity->set('field_dwc_decimallatitude',  $geo->getValue('lat'));
-    $entity->set('field_dwc_decimallongitude',  $geo->getValue('lng'));
-    $entity->set('field_dwc_stateprovince',  $geo->getValue('adminName1'));
-    $point = array(
-        'lon' =>  $geo->data_arr['lng'],
-        'lat' =>  $geo->data_arr['lat'],
-      );
-    $geo_field_value = \Drupal::service('geofield.wkt_generator')->WktBuildPoint($point);
-    $entity->set('field_herb_geo_field', $geo_field_value);
-
-    try {
-      $taxoniri = $entity->get("field_dwciri_scientificname")->getValue();
-      $taxon = \Drupal::service('islandora_herbarium_object.taxonparser');
-      $taxon->getRemoteData($taxoniri[0]['value']);
-      $taxon->parseData();
-    } catch (Exception $e) {
-      watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
-      drupal_set_message(t('There was an error retrieving Taxon data. %msg. Verify the url is correct %url',
-        array('%msg'=> $e->getMessage(), '%url' => $taxoniri[0]['value'])),'error');
-      return;
-    }
-    $entity->set('field_dwc_scientificname',  $taxon->getValue('canonicalName'));
-    $name_arr = explode(' ', $taxon->getValue('canonicalName'));
-    $entity->set('field_dwc_specificepithet',  $name_arr[1]);
-    $entity->set('field_dwc_kingdom', $taxon->getValue('kingdom'));
-    $entity->set('field_dwc_genus',  $taxon->getValue('genus'));
-    $entity->set('field_dwc_phylum',  $taxon->getValue('phylum'));
-    $entity->set('field_dwc_order',  $taxon->getValue('order'));
-    $entity->set('field_dwc_family',  $taxon->getValue('family'));
-    $entity->set('field_dwc_vernacularname',  $taxon->getValue('vernacularName'));
+    // Get the geo data.
+    $geo = \Drupal::service('islandora_herbarium_object.geoparser');
+    $geo->updateEntity($entity);
+    // Get the taxonomy data.
+    $taxon = \Drupal::service('islandora_herbarium_object.taxonparser');
+    $taxon->updateEntity($entity);
 
     $title =  $taxon->getValue('canonicalName') . ' - ' .  $geo->getValue('name');
     if(!empty($title)) {

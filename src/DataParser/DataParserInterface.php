@@ -23,4 +23,6 @@ interface DataParserInterface
    */
   public function getValue($key);
 
+  public function updateEntity($entity);
+
 }
