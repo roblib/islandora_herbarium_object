@@ -16,11 +16,6 @@ interface DataParserInterface
 
   public function parseData();
 
-  /**
-   * Gets the value from an array based on it's key, elimnates warnings if key does not exist.
-   * @param $arr
-   * @param $key
-   */
   public function getValue($key);
 
   public function updateEntity($entity);

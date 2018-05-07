@@ -2,4 +2,4 @@ services:
   islandora_herbarium_object.taxonparser:
     class: Drupal\islandora_herbarium_object\DataParser\GbifParser
   islandora_herbarium_object.geoparser:
-    class: Drupal\islandora_herbarium_object\DataParser\GeonamesParser
+    class: Drupal\islandora_herbarium_object\DataParser\NrcanParser

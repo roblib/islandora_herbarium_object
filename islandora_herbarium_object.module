@@ -32,16 +32,26 @@ function islandora_herbarium_object_entity_presave(Drupal\Core\Entity\EntityInte
 {
   if ($entity->bundle() == 'islandora_herbarium_object') {
     // Get the geo data.
-    $geo = \Drupal::service('islandora_herbarium_object.geoparser');
-    $geo->updateEntity($entity);
+    try {
+      $geo = \Drupal::service('islandora_herbarium_object.geoparser');
+      $geo->updateEntity($entity);
+    } catch (Exception $e) {
+      drupal_set_message(t('There was an error retrieving Geo data. %msg.',
+        array('%msg'=> $e->getMessage())), 'error');
+    }
     // Get the taxonomy data.
-    $taxon = \Drupal::service('islandora_herbarium_object.taxonparser');
-    $taxon->updateEntity($entity);
-
+    try {
+      $taxon = \Drupal::service('islandora_herbarium_object.taxonparser');
+      $taxon->updateEntity($entity);
+    } catch(Exception $e) {
+      drupal_set_message(t('There was an error retrieving Taxon data. %msg.',
+        array('%msg'=> $e->getMessage())), 'error');
+    }
     $title =  $taxon->getValue('canonicalName') . ' - ' .  $geo->getValue('name');
-    if(!empty($title)) {
+    if($title != ' - ') {
       $entity->setTitle($title);
     }
+
 
   }
 }

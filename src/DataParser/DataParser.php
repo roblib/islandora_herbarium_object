@@ -14,14 +14,18 @@ abstract class DataParser implements DataParserInterface
   public $data;
   public $data_arr = array();
 
-  public function getRemoteData($uri) {
+  public function getRemoteData($uri, $returnAsVariable = FALSE) {
     $client = \Drupal::httpClient();
     $request = $client->get(trim($uri));
     $data = $request->getBody()->getContents();
     if(empty($data)) {
       throw new Exception("Empty dataset");
     }
-    $this->data = $data;
+    if(!$returnAsVariable) {
+      $this->data = $data;
+    } else {
+      return $data;
+    }
   }
 
   public function getValue($key) {
