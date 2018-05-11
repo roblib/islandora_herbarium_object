@@ -11,6 +11,7 @@ namespace Drupal\islandora_herbarium_object\DataParser;
 
 class GbifParser extends DataParser
 {
+  public $gbifUrlPrefix = 'http://api.gbif.org/v1/species?name=';
   public function parseData() {
     $arr  = json_decode($this->data, TRUE);
     if(empty($arr['results'])) {
@@ -22,11 +23,17 @@ class GbifParser extends DataParser
   public function updateEntity($entity) {
     try {
       $taxoniri = $entity->get("field_dwciri_scientificname")->getValue();
-      if(empty($taxoniri[0]['value'])) {
-        throw new Exception("No URI provided, cannot look up taxon data.");
+      $url = '';
+      if(empty($url = $taxoniri[0]['value']) && !empty($entity->get('field_dwc_scientificname')->getValue())) {
+        $value = array($this->getGbifUrl($entity->get('field_dwc_scientificname')->getValue()[0]['value']));
+        $taxoniri[] = ['value' => $value[0]];
+        $url = $taxoniri[0]['value'];
+        if(empty($url)) {
+          throw new \Exception("No ScientificName URI or ScientificName text provided, cannot look up taxon data.");
+        }
+        $entity->set('field_dwciri_scientificname', $url);
       }
-
-      $this->getRemoteData($taxoniri[0]['value']);
+      $this->getRemoteData($url);
       $this->parseData();
     } catch (Exception $e) {
       watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
@@ -43,6 +50,10 @@ class GbifParser extends DataParser
     $entity->set('field_dwc_order',  $this->getValue('order'));
     $entity->set('field_dwc_family',  $this->getValue('family'));
     $entity->set('field_dwc_vernacularname',  $this->getValue('vernacularName'));
+  }
+
+  public function getGbifUrl($scientificName){
+    return $this->gbifUrlPrefix . $scientificName;
   }
 
 }
