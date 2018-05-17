@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: epkRYesg00lvVbwbeSFv2gt3fMcfouOY4UVgdEh7li8
+  default_config_hash: W_du8tr9hJ9Qmm8IN97ZFN0EKPyB5g6gS1_L9F-B_44
 id: node.field_dc_accessrights
 field_name: field_dc_accessrights
 entity_type: node

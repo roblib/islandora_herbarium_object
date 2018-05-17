@@ -1,0 +1,20 @@
+uuid: 04da6409-73ad-4c0b-bc95-4c724b8e3380
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: TcpDZFaGufLxOwFpvkvr4vBcBEZgO5vUSBKjVItSeTE
+name: 'Repository Item'
+type: islandora_object
+description: 'An item in your Islandora repository.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -28,10 +28,8 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_jp2
-    - field.field.node.islandora_herbarium_object.field_tiff
-    - field.field.node.islandora_herbarium_object.field_tn
-    - field.field.node.islandora_herbarium_object.field_web_content
+    - field.field.node.islandora_herbarium_object.field_member_of
+    - field.field.node.islandora_herbarium_object.field_tags
     - node.type.islandora_herbarium_object
   module:
     - datetime
@@ -85,14 +83,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_dwc_phylum:
-    weight: 27
+  field_dwc_municipality:
+    type: string_textfield
+    weight: 13
+    region: content
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_dwc_recordedby:
     weight: 9
     settings:
@@ -101,58 +99,48 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_dwc_scientificname:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_dwciri_municipality:
     type: string_textarea
-    weight: 13
+    weight: 12
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_dwciri_scientificname:
-    weight: 26
+    weight: 15
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_jp2:
-    type: entity_reference_autocomplete
+  field_member_of:
     weight: 17
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_tiff:
     type: entity_reference_autocomplete
+    region: content
+  field_tags:
     weight: 18
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_tn:
     type: entity_reference_autocomplete
-    weight: 15
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_web_content:
-    type: entity_reference_autocomplete
-    weight: 16
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   path:
     type: path
     weight: 4
@@ -208,9 +196,8 @@ hidden:
   field_dwc_family: true
   field_dwc_genus: true
   field_dwc_kingdom: true
-  field_dwc_municipality: true
   field_dwc_order: true
-  field_dwc_scientificname: true
+  field_dwc_phylum: true
   field_dwc_specificepithet: true
   field_dwc_stateprovince: true
   field_dwc_vernacularname: true

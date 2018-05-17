@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: QVFR4rBUfDeKDcNytkUGU3QSee2isXb_o3lGv5ttkjs
 id: node.field_dwciri_scientificname
 field_name: field_dwciri_scientificname
 entity_type: node

@@ -8,8 +8,8 @@ id: node.islandora_herbarium_object.field_dwciri_scientificname
 field_name: field_dwciri_scientificname
 entity_type: node
 bundle: islandora_herbarium_object
-label: scientificName
-description: ''
+label: 'Scientific Name URI'
+description: 'You must provide a URL to GBif datasource (similar to http://api.gbif.org/v1/species?name=Sonchus arvensis) or a Scientific name in the field below.  If you provide a URL here we will use the data retrieved from it''s endpoint to populate the Scientific Name and other taxon fields.'
 required: false
 translatable: false
 default_value: {  }

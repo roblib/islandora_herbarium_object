@@ -2,26 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tiff
-    - media_entity.bundle.image_tiff
+    - field.storage.node.field_tags
     - node.type.islandora_herbarium_object
-id: node.islandora_herbarium_object.field_tiff
-field_name: field_tiff
+    - taxonomy.vocabulary.tags
+id: node.islandora_herbarium_object.field_tags
+field_name: field_tags
 entity_type: node
 bundle: islandora_herbarium_object
-label: 'Tiff image'
+label: Tags
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      image_tiff: image_tiff
+      tags: tags
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

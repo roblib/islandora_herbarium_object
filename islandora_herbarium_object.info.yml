@@ -12,6 +12,5 @@ dependencies:
   - rdf
   - text
   - user
-  - islandora_collection
   - geofield_map
   - openseadragon

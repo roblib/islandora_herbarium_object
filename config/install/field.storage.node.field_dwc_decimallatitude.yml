@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: pJmDr_vCyHkR8NYRfg8BtvPYS0K0tEqQUzyxIxKbgFA
+  default_config_hash: _x26BWROAn-0f9C3-OKuDLtMwQUyLJ1E2_PdvQFd4GQ
 id: node.field_dwc_decimallatitude
 field_name: field_dwc_decimallatitude
 entity_type: node

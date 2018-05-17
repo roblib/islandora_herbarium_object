@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: j1o9X5rSjhtE-oWzxDl79JXolsRTg4ZmXMkSAU1Smps
+  default_config_hash: eWj-7kMBrnzQchQjo5uEbqLh02lb6q3HB5iR2AUJRiI
 id: node.field_dwc_continent
 field_name: field_dwc_continent
 entity_type: node

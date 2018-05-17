@@ -28,37 +28,27 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_jp2
-    - field.field.node.islandora_herbarium_object.field_tiff
-    - field.field.node.islandora_herbarium_object.field_tn
-    - field.field.node.islandora_herbarium_object.field_web_content
+    - field.field.node.islandora_herbarium_object.field_member_of
+    - field.field.node.islandora_herbarium_object.field_tags
     - node.type.islandora_herbarium_object
   module:
     - datetime
     - geofield_map
-    - text
     - user
 id: node.islandora_herbarium_object.default
 targetEntityType: node
 bundle: islandora_herbarium_object
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_dc_accessrights:
-    weight: 6
+    weight: 18
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_dc_language:
-    weight: 5
+    weight: 22
     label: inline
     settings:
       link_to_entity: false
@@ -66,37 +56,44 @@ content:
     type: string
     region: content
   field_dc_rights:
-    weight: 9
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_dc_type:
-    weight: 4
+    weight: 0
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_dwc_continent:
+  field_dwc_class:
     type: basic_string
-    weight: 19
+    weight: 3
     region: content
-    label: inline
+    label: above
     settings: {  }
     third_party_settings: {  }
-  field_dwc_country:
+  field_dwc_continent:
     type: basic_string
     weight: 11
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+  field_dwc_country:
+    type: basic_string
+    weight: 12
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_dwc_countrycode:
     type: string
-    weight: 12
+    weight: 13
     region: content
     label: inline
     settings:
@@ -104,7 +101,7 @@ content:
     third_party_settings: {  }
   field_dwc_decimallatitude:
     type: string
-    weight: 25
+    weight: 16
     region: content
     label: inline
     settings:
@@ -112,14 +109,14 @@ content:
     third_party_settings: {  }
   field_dwc_decimallongitude:
     type: string
-    weight: 26
+    weight: 17
     region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_dwc_eventdate:
-    weight: 8
+    weight: 20
     label: inline
     settings:
       format_type: medium
@@ -129,27 +126,27 @@ content:
     region: content
   field_dwc_family:
     type: basic_string
-    weight: 16
+    weight: 5
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_genus:
     type: basic_string
-    weight: 17
+    weight: 6
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_kingdom:
     type: basic_string
-    weight: 18
+    weight: 1
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_municipality:
-    weight: 10
+    weight: 15
     label: inline
     settings:
       link_to_entity: false
@@ -158,27 +155,27 @@ content:
     region: content
   field_dwc_order:
     type: basic_string
-    weight: 20
+    weight: 4
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_phylum:
-    weight: 28
-    label: above
+    weight: 2
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_dwc_recordedby:
-    weight: 7
+    weight: 19
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_dwc_scientificname:
-    weight: 13
+    weight: 8
     label: inline
     settings:
       link_to_entity: false
@@ -187,34 +184,27 @@ content:
     region: content
   field_dwc_specificepithet:
     type: basic_string
-    weight: 15
+    weight: 7
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_stateprovince:
     type: basic_string
-    weight: 21
+    weight: 14
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_dwc_vernacularname:
     type: basic_string
-    weight: 14
+    weight: 9
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_dwciri_scientificname:
-    weight: 27
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_herb_geo_field:
-    weight: 1
+    weight: 10
     label: inline
     settings:
       gmap_api_key: ''
@@ -270,45 +260,24 @@ content:
     third_party_settings: {  }
     type: geofield_google_map
     region: content
-  field_jp2:
-    type: entity_reference_entity_view
-    weight: 24
-    region: content
-    label: inline
-    settings:
-      view_mode: content
-      link: false
-    third_party_settings: {  }
-  field_tiff:
-    type: entity_reference_entity_view
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-  field_tn:
-    type: entity_reference_label
-    weight: 22
-    region: content
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_web_content:
-    type: entity_reference_label
+  field_member_of:
     weight: 23
-    region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 2
+    type: entity_reference_label
     region: content
-    settings: {  }
+  field_tags:
+    weight: 24
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
 hidden:
-  field_dwc_class: true
+  body: true
   field_dwciri_municipality: true
+  field_dwciri_scientificname: true
+  links: true

@@ -9,7 +9,7 @@ field_name: field_dwc_scientificname
 entity_type: node
 bundle: islandora_herbarium_object
 label: 'Scientific Name'
-description: ''
+description: 'Scientific Name (formatted similar to Sonchus arvensis).  If you provide a Scientific Name here and not a URI above (in the Scientific Name URI field)  we will use the name here to create the URL and look up the taxon data.'
 required: false
 translatable: false
 default_value: {  }

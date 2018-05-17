@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: jLUhihoYrP9QnSV4iFfZmbbJ-0JLyqhXdZAv4f6X7HQ
 id: node.field_dwc_phylum
 field_name: field_dwc_phylum
 entity_type: node

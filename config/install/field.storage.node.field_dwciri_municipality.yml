@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: bHsgEY9rB7-_2t60_Nm_1bjyfCjDYyhTuWP0DCAjKLw
+  default_config_hash: rMn9VAz8xO9grwK8T8oTzunf4RzyXh3WB7Zv-qoPNss
 id: node.field_dwciri_municipality
 field_name: field_dwciri_municipality
 entity_type: node

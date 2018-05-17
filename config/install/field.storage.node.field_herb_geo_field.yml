@@ -6,7 +6,7 @@ dependencies:
     - geofield
     - node
 _core:
-  default_config_hash: QrT9zPk9uENNLXto3IY8MJPfCi8xrXGxAS5ynmNk7NQ
+  default_config_hash: I4RNl9TjnoNN7ymeYykVN8nLxV9AlxPBoKSoQ_mJ7lc
 id: node.field_herb_geo_field
 field_name: field_herb_geo_field
 entity_type: node

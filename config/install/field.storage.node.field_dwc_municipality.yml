@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: yDKbpp3EUFQ3fA76N2knem22268UQagOHkpXEeFcimA
+  default_config_hash: SHQg94oNVPuuy7G-g6t9044jL4Rkvv9K-igYuCYn5dM
 id: node.field_dwc_municipality
 field_name: field_dwc_municipality
 entity_type: node

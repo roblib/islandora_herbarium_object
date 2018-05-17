@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: 5ca5kvghp0w38FCMdJo-s1Cb-_PUOY-g7iSdyCw9XFs
+  default_config_hash: Ovr_D1omcGQtxysPZb3QqvIf8HrnrYohxGFxhr6NBWQ
 id: node.field_dwc_recordedby
 field_name: field_dwc_recordedby
 entity_type: node

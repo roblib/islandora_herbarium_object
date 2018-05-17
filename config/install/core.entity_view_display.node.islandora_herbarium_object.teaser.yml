@@ -20,17 +20,15 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwc_kingdom
     - field.field.node.islandora_herbarium_object.field_dwc_municipality
     - field.field.node.islandora_herbarium_object.field_dwc_order
+    - field.field.node.islandora_herbarium_object.field_dwc_phylum
     - field.field.node.islandora_herbarium_object.field_dwc_recordedby
     - field.field.node.islandora_herbarium_object.field_dwc_scientificname
     - field.field.node.islandora_herbarium_object.field_dwc_specificepithet
     - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
     - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
+    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_jp2
-    - field.field.node.islandora_herbarium_object.field_tiff
-    - field.field.node.islandora_herbarium_object.field_tn
-    - field.field.node.islandora_herbarium_object.field_web_content
     - node.type.islandora_herbarium_object
   module:
     - text
@@ -68,14 +66,12 @@ hidden:
   field_dwc_kingdom: true
   field_dwc_municipality: true
   field_dwc_order: true
+  field_dwc_phylum: true
   field_dwc_recordedby: true
   field_dwc_scientificname: true
   field_dwc_specificepithet: true
   field_dwc_stateprovince: true
   field_dwc_vernacularname: true
   field_dwciri_municipality: true
+  field_dwciri_scientificname: true
   field_herb_geo_field: true
-  field_jp2: true
-  field_tiff: true
-  field_tn: true
-  field_web_content: true

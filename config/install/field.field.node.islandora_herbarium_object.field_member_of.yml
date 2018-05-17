@@ -2,26 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_jp2
-    - media_entity.bundle.jp2
+    - field.storage.node.field_member_of
     - node.type.islandora_herbarium_object
-id: node.islandora_herbarium_object.field_jp2
-field_name: field_jp2
+    - node.type.islandora_object
+id: node.islandora_herbarium_object.field_member_of
+field_name: field_member_of
 entity_type: node
 bundle: islandora_herbarium_object
-label: JP2
+label: 'Member of'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      jp2: jp2
+      islandora_herbarium_object: islandora_herbarium_object
+      islandora_object: islandora_object
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: islandora_herbarium_object
 field_type: entity_reference

@@ -20,17 +20,15 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwc_kingdom
     - field.field.node.islandora_herbarium_object.field_dwc_municipality
     - field.field.node.islandora_herbarium_object.field_dwc_order
+    - field.field.node.islandora_herbarium_object.field_dwc_phylum
     - field.field.node.islandora_herbarium_object.field_dwc_recordedby
     - field.field.node.islandora_herbarium_object.field_dwc_scientificname
     - field.field.node.islandora_herbarium_object.field_dwc_specificepithet
     - field.field.node.islandora_herbarium_object.field_dwc_stateprovince
     - field.field.node.islandora_herbarium_object.field_dwc_vernacularname
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
+    - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_jp2
-    - field.field.node.islandora_herbarium_object.field_tiff
-    - field.field.node.islandora_herbarium_object.field_tn
-    - field.field.node.islandora_herbarium_object.field_web_content
     - node.type.islandora_herbarium_object
   module:
     - datetime
@@ -255,40 +253,6 @@ content:
     third_party_settings: {  }
     type: geofield_google_map
     region: content
-  field_jp2:
-    type: entity_reference_entity_view
-    weight: 24
-    region: content
-    label: inline
-    settings:
-      view_mode: content
-      link: false
-    third_party_settings: {  }
-  field_tiff:
-    type: entity_reference_entity_view
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-  field_tn:
-    type: entity_reference_label
-    weight: 22
-    region: content
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_web_content:
-    type: entity_reference_label
-    weight: 23
-    region: content
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
   links:
     weight: 2
     region: content
@@ -296,4 +260,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_dwc_class: true
+  field_dwc_phylum: true
   field_dwciri_municipality: true
+  field_dwciri_scientificname: true

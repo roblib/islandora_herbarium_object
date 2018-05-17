@@ -9,7 +9,7 @@ field_name: field_dwc_municipality
 entity_type: node
 bundle: islandora_herbarium_object
 label: Municipality
-description: ''
+description: 'Municipality text field  (formatted similar to Mount Steward).  If you provide a Municipality here and not a URI above (in the Municipality URI field)  we will use the name here to create the URL and look up the Municipality/Location data.'
 required: false
 translatable: false
 default_value: {  }

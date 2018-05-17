@@ -9,7 +9,7 @@ field_name: field_dwciri_municipality
 entity_type: node
 bundle: islandora_herbarium_object
 label: 'Municipality URI'
-description: ''
+description: 'You must provide a URL to NRCAN datasource (formatted similar to http://geogratis.gc.ca/services/geoname/en/geonames/BABUW) or a Municipality in the field below.  If this field is populated we will use data retrieved for it''s endpoint to populate the Municipality and other fields'
 required: false
 translatable: false
 default_value: {  }
