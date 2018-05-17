@@ -28,7 +28,6 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_member_of
     - field.field.node.islandora_herbarium_object.field_tags
     - node.type.islandora_herbarium_object
   module:
