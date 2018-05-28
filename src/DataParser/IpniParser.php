@@ -1,16 +1,15 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: ppound
- * Date: 2018-04-30
- * Time: 11:23 AM
- */
 
 namespace Drupal\islandora_herbarium_object\DataParser;
 
+/**
+ * Provides storage and functions for IPNI data.
+ */
+abstract class IpniParser extends XmlDataParser {
 
-class IpniParser extends XmlDataParser
-{
+  /**
+   * {@inheritdoc}
+   */
   public function parseData() {
     $xml_doc = new \DOMDocument();
     $xml_doc->loadXML($this->data);
@@ -18,4 +17,5 @@ class IpniParser extends XmlDataParser
     $this->getXmlNodeValue($xml_doc, 'genusPart');
     $this->getXmlNodeValue($xml_doc, 'specificEpithet');
   }
+
 }

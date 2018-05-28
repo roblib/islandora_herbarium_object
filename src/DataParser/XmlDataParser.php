@@ -1,18 +1,22 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: ppound
- * Date: 2018-05-04
- * Time: 1:16 PM
- */
 
 namespace Drupal\islandora_herbarium_object\DataParser;
 
+/**
+ * Provides functions for simple XML data.
+ */
+abstract class XmlDataParser extends DataParser {
 
-abstract class XmlDataParser extends DataParser
-{
-  public function getXmlNodeValue($xml_doc, $element_name)
-  {
-    $this->data_arr[$element_name] = $xml_doc->getElementsByTagName($element_name)[0]->nodeValue;
+  /**
+   * Retrieves the value of the first xml node matching element_name.
+   *
+   * @param \DOMDocument $xml_doc
+   *   An xml document.
+   * @param string $element_name
+   *   The xml node to lookup.
+   */
+  public function getXmlNodeValue(\DOMDocument $xml_doc, $element_name) {
+    $this->dataArray[$element_name] = $xml_doc->getElementsByTagName($element_name)[0]->nodeValue;
   }
+
 }

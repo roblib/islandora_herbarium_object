@@ -1,35 +1,39 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: ppound
- * Date: 2018-04-30
- * Time: 11:25 AM
- */
 
 namespace Drupal\islandora_herbarium_object\DataParser;
 
+/**
+ * Abstract implementation of DataParserInterface base on arrays.
+ */
+abstract class DataParser implements DataParserInterface {
 
-abstract class DataParser implements DataParserInterface
-{
   public $data;
-  public $data_arr = array();
 
+  public $dataArray = [];
+
+  /**
+   * {@inheritdoc}
+   */
   public function getRemoteData($uri, $returnAsVariable = FALSE) {
     $client = \Drupal::httpClient();
     $request = $client->get(trim($uri));
     $data = $request->getBody()->getContents();
-    if(empty($data)) {
+    if (empty($data)) {
       throw new Exception("Empty dataset");
     }
-    if(!$returnAsVariable) {
+    if (!$returnAsVariable) {
       $this->data = $data;
-    } else {
+    }
+    else {
       return $data;
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function getValue($key) {
-    return isset($this->data_arr[$key]) ? $this->data_arr[$key] : "";
+    return isset($this->dataArray[$key]) ? $this->dataArray[$key] : "";
   }
 
 }
