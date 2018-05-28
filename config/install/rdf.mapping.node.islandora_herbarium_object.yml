@@ -50,28 +50,42 @@ fieldMappings:
   field_dwc_genus:
       properties:
         - 'dwc:genus'
+  field_dwc_class:
+      properties:
+        - 'dwc:class'
+  field_dwc_kingdom:
+      properties:
+        - 'dwc:kingdom'
+  field_dwc_phylum:
+      properties:
+        - 'dwc:phylum'
+  field_dwc_order:
+      properties:
+        - 'dwc:order'
+  field_dwc_family:
+      properties:
+        - 'dwc:family'
+  field_dwc_continent:
+      properties:
+        - 'dwc:continent'
+  field_dwc_country:
+      properties:
+        - 'dwc:country'
+  field_dwc_stateprovince:
+      properties:
+        - 'dwc:stateprovince'
+  field_dwc_decimallatitude:
+      properties:
+        - 'dwc:decimallatitude'
+  field_dwc_decimallongitude:
+      properties:
+        - 'dwc:decimallongitude'
   field_dwc_eventdate:
     properties:
       - 'dwc:eventDate'
   field_memberof:
     properties:
       - 'pcdm:memberOf'
-    mapping_type: rel
-  field_tiff:
-    properties:
-      - 'pcdm:hasFile'
-    mapping_type: rel
-  field_jp2:
-    properties:
-      - 'pcdm:hasFile'
-    mapping_type: rel
-  field_web_content:
-    properties:
-      - 'pcdm:hasFile'
-    mapping_type: rel
-  field_tn:
-    properties:
-      - 'pcdm:hasFile'
     mapping_type: rel
   title:
     properties:

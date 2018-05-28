@@ -26,6 +26,17 @@ function islandora_herbarium_object_help($route_name, RouteMatchInterface $route
 }
 
 /**
+ * Implements hook_rdf_namespaces().
+ */
+function islandora_herbarium_object_rdf_namespaces() {
+  // Yes, it's amazing, rdf is not registered by default!
+  return [
+    'dwc'  => 'http://rs.tdwg.org/dwc/terms/',
+    'dwciri' => 'http://rs.tdwg.org/dwc/iri/',
+  ];
+}
+
+/**
  * Implements hook_entity_presave().
  */
 function islandora_herbarium_object_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
