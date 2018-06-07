@@ -1,0 +1,14 @@
+islandora_herbarium_object.graph:
+  path: '/islandora_herbarium_object/fdg'
+  defaults:
+    _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgGraph'
+    _title: 'Graph'
+  requirements:
+    _permission: 'access content'
+islandora_herbarium_object.graph-json:
+  path: '/islandora_herbarium_object/fdg_json'
+  defaults:
+    _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgData'
+    _title: 'Graph Json'
+  requirements:
+    _permission: 'access content'

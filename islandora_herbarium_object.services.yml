@@ -3,3 +3,5 @@ services:
     class: Drupal\islandora_herbarium_object\DataParser\GbifParser
   islandora_herbarium_object.geoparser:
     class: Drupal\islandora_herbarium_object\DataParser\NrcanParser
+  islandora_herbarium_object.fdggraph:
+      class: Drupal\islandora_herbarium_object\Graph\FdgGraph

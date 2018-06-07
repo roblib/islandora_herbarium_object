@@ -14,3 +14,4 @@ dependencies:
   - user
   - geofield_map
   - openseadragon
+  - solr_facet_field_formatter
