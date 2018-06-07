@@ -41,7 +41,7 @@ class FdgGraph {
         $outputArr['nodes'][] = [
           'id' => $result['municipality']['value'],
           'name' => $result['municipality']['value'],
-          'label' => $result['municipalityIRI']['value'],
+          'uri' => $result['municipalityIRI']['value'],
           'group' => 1,
         ];
         $idArr[$result['municipality']['value']] = '';
@@ -49,7 +49,7 @@ class FdgGraph {
       $outputArr['nodes'][] = [
         'id' => $result['name']['value'],
         'name' => $result['name']['value'],
-        'label' => $result['scientificNameIRI']['value'],
+        'uri' => $result['scientificNameIRI']['value'],
         'group' => 2,
       ];
       $outputArr['links'][] = [

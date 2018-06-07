@@ -42,17 +42,6 @@ d3.json("/islandora_herbarium_object/fdg_json", function (error, graph) {
       return d.id;
     });
 
-  /*var textElement = svg.append('g')
-    .attr('class', 'text')
-    .selectAll('text')
-    .data(graph.nodes)
-    .enter().append('text')
-    .text(function(d) {return d.name;})
-    .attr('font-size', 10)
-    .attr('font-weight', 'bolder')
-    .attr('dx', 15)
-    .attr('dy', 4)*/
-
   var uriElement = svg.append('g')
     .attr('class', 'uri')
     .attr('x', 8)
@@ -62,7 +51,7 @@ d3.json("/islandora_herbarium_object/fdg_json", function (error, graph) {
     .enter().append('a')
     .attr("target", "_blank")
     .attr('xlink:href', function (d) {
-      return d.label
+      return d.uri
     })
     .append('text')
     .text(function (d) {
@@ -70,12 +59,7 @@ d3.json("/islandora_herbarium_object/fdg_json", function (error, graph) {
     })
     .attr('font-size', 10)
     .attr('font-weight', 'bolder');
-  //.attr('dx', 15)
-  //.attr('dy', 28);
-  //uriElement.select("a")
-  //  .attr("xlink:href", function(d) {
-  //   return d.label;
-  // });
+
 
   simulation
     .nodes(graph.nodes)
