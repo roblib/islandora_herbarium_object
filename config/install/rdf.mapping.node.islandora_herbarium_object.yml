@@ -44,6 +44,9 @@ fieldMappings:
   field_dwc_scientificname:
     properties:
       - 'dwc:scientificName'
+  field_dwc_vernacularName:
+      properties:
+        - 'dwc:vernacularName'
   field_dwc_specificepithet:
       properties:
         - 'dwc:specificepithet'
