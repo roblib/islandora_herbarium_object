@@ -86,13 +86,17 @@ class NrcanParser extends DataParser {
    *
    * @param string $municipality
    *   The municipality that we want to lookup.
+   * @param string $province
+   *   Limit a municipality to a province.
+   *   Defaults to 11 (Prince Edward Island).
    *
    * @return string
    *   URL String based on the nrcanUrlPrefix class variable plus a key that
    *   represents the municipality.
    */
-  public function getNrcanUrl($municipality) {
-    $url = $this->nrcanUrlSearchPrefix . $municipality . "&province=11";
+  public function getNrcanUrl($municipality, $province='11') {
+    $url = $this->nrcanUrlSearchPrefix . $municipality . '&province=' .
+      $province;
     $data = $this->getRemoteData($url, TRUE);
     $data_arr = json_decode($data, TRUE);
     $key = '';

@@ -1,14 +1,18 @@
 islandora_herbarium_object.graph:
-  path: '/islandora_herbarium_object/fdg'
+  path: '/islandora_herbarium_object/fdg/{scientificName}/{municipality}'
   defaults:
     _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgGraph'
     _title: 'Graph'
+    scientificName: ''
+    municipality: ''
   requirements:
     _permission: 'access content'
 islandora_herbarium_object.graph-json:
-  path: '/islandora_herbarium_object/fdg_json'
+  path: '/islandora_herbarium_object/fdg_json/{scientificName}/{municipality}'
   defaults:
     _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgData'
     _title: 'Graph Json'
+    scientificName: ''
+    municipality: ''
   requirements:
     _permission: 'access content'

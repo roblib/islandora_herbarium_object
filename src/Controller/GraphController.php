@@ -15,7 +15,7 @@ class GraphController extends ControllerBase {
    * @return array
    *   A renderable array.
    */
-  public function printFdgGraph() {
+  public function printFdgGraph($scientificName = NULL, $municipality = NULL) {
     return [
       '#theme' => 'fdg_graph',
       '#attached' => [
@@ -30,9 +30,12 @@ class GraphController extends ControllerBase {
 
   /**
    * Directly outputs the json for calls from javascript.
+   *
+   * TODO: expose as a proper rest endpoint
    */
-  public function printFdgData() {
+  public function printFdgData($scientificName = NULL, $municipality = NULL) {
     $fdgGraph = \Drupal::service('islandora_herbarium_object.fdggraph');
+    $fdgGraph->getData($scientificName, $municipality);
     $graphJson = $fdgGraph->parseData();
     print $graphJson;
     exit();
