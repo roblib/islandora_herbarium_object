@@ -3,8 +3,8 @@ islandora_herbarium_object.graph:
   defaults:
     _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgGraph'
     _title: 'Graph'
-    scientificName: ''
-    municipality: ''
+    scientificName: '[a-zA-Z\s]+'
+    municipality: '[a-zA-Z\s]+'
   requirements:
     _permission: 'access content'
 islandora_herbarium_object.graph-json:
@@ -12,7 +12,7 @@ islandora_herbarium_object.graph-json:
   defaults:
     _controller: '\Drupal\islandora_herbarium_object\Controller\GraphController::printFdgData'
     _title: 'Graph Json'
-    scientificName: ''
-    municipality: ''
+    scientificName: '[a-zA-Z\s]+'
+    municipality: '[a-zA-Z\s]+'
   requirements:
     _permission: 'access content'
