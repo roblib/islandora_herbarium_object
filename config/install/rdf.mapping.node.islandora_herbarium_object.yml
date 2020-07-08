@@ -27,7 +27,6 @@ fieldMappings:
   field_dwciri_municipality:
     properties:
       - 'dwciri:municipality'
-    mapping_type: rel
   field_dwc_municipality:
     properties:
       - 'dwc:municipality'
@@ -40,7 +39,6 @@ fieldMappings:
   field_dwciri_scientificname:
     properties:
       - 'dwciri:scientificName'
-    mapping_type: rel
   field_dwc_scientificname:
     properties:
       - 'dwc:scientificName'

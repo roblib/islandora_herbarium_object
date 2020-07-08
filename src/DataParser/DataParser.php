@@ -16,7 +16,9 @@ abstract class DataParser implements DataParserInterface {
    */
   public function getRemoteData($uri, $returnAsVariable = FALSE) {
     $client = \Drupal::httpClient();
-    $request = $client->get(trim($uri));
+    $request = $client->request('GET', trim($uri),[
+      'headers' => ['Accept' => 'application/json'],
+    ]);
     $data = $request->getBody()->getContents();
     if (empty($data)) {
       throw new Exception("Empty dataset");
