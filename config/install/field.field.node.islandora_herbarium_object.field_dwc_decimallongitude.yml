@@ -1,9 +1,12 @@
+uuid: 60553c1b-1ff8-4973-8236-4a7586233aa0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dwc_decimallongitude
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: xSF_p_LJhBp5Wyl1J_02xoYtYKM_Lzv9NcBoLE2BFjs
 id: node.islandora_herbarium_object.field_dwc_decimallongitude
 field_name: field_dwc_decimallongitude
 entity_type: node

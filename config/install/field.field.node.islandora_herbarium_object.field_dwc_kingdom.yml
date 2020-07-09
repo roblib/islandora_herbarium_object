@@ -1,9 +1,12 @@
+uuid: c7418f63-a085-4de0-8868-1fefaffbbc04
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dwc_kingdom
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: CgqbBDpJ3Exux3cjMLqZRzoSA4aCBFgNr7A5WQGMOBE
 id: node.islandora_herbarium_object.field_dwc_kingdom
 field_name: field_dwc_kingdom
 entity_type: node

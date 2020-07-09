@@ -1,3 +1,4 @@
+uuid: dad79336-6e42-4f56-abcb-134452ccf382
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.islandora_herbarium_object
   module:
     - geofield
+_core:
+  default_config_hash: Ed5uMwtTkqNl4I9Eq2Cy1xBEIxn_HoGFvGLVrHfqnHk
 id: node.islandora_herbarium_object.field_herb_geo_field
 field_name: field_herb_geo_field
 entity_type: node

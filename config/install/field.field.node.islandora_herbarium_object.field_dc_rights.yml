@@ -1,9 +1,12 @@
+uuid: 6c63f09e-8f4b-4414-b751-d2b6d91248bc
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dc_rights
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: dOucSG-Es6v0RQTA1MEkJ-bVU35nHe096vXfxC6mga0
 id: node.islandora_herbarium_object.field_dc_rights
 field_name: field_dc_rights
 entity_type: node

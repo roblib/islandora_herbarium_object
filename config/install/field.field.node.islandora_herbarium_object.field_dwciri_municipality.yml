@@ -1,9 +1,12 @@
+uuid: 62b105bf-9c9c-4cf5-9a16-6b189090c3af
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dwciri_municipality
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: zkaVaU2DS8CIZrsxfVm3HAOHFX7SotlUWuxlxPekRFI
 id: node.islandora_herbarium_object.field_dwciri_municipality
 field_name: field_dwciri_municipality
 entity_type: node

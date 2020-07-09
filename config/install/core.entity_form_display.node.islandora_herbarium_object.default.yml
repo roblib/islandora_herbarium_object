@@ -1,3 +1,4 @@
+uuid: ae41fd3c-9251-4987-ab1d-5143695fa18c
 langcode: en
 status: true
 dependencies:
@@ -28,11 +29,15 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
-    - field.field.node.islandora_herbarium_object.field_tags
+    - field.field.node.islandora_herbarium_object.field_member_of
+    - field.field.node.islandora_herbarium_object.field_model
+    - field.field.node.islandora_herbarium_object.field_resource_type
     - node.type.islandora_herbarium_object
   module:
     - datetime
     - path
+_core:
+  default_config_hash: eVKlVpUFb3AA5i419n8yBBw1q8XFC-3K6vMvJu-fXhc
 id: node.islandora_herbarium_object.default
 targetEntityType: node
 bundle: islandora_herbarium_object
@@ -123,23 +128,42 @@ content:
     type: string_textarea
     region: content
   field_member_of:
-    weight: 17
+    weight: 27
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_tags:
-    weight: 18
+  field_model:
+    weight: 26
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_resource_type:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 4
@@ -182,6 +206,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden:

@@ -1,3 +1,4 @@
+uuid: 12887698-901b-4efd-a697-5efc5884e35c
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.islandora_herbarium_object
   module:
     - text
+_core:
+  default_config_hash: 5UAs8OIpLKPFiYlohxolkOf-LI6CKaid3Q2gvMSaNSc
 id: node.islandora_herbarium_object.body
 field_name: body
 entity_type: node
@@ -18,4 +21,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
+  required_summary: false
 field_type: text_with_summary

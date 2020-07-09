@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: QVFR4rBUfDeKDcNytkUGU3QSee2isXb_o3lGv5ttkjs
+  default_config_hash: xQijSXUD_dr4Ca0QIdvk4a0Rp968SeoX5xEJcoUGClI
 id: node.field_dwciri_scientificname
 field_name: field_dwciri_scientificname
 entity_type: node

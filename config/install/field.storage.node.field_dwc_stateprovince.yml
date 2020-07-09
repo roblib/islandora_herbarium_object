@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: bgv7CjcgxUURyywMIFl1DWtzrTzYSzpKWpu1U5YO5pU
+  default_config_hash: ZEO0XIVidPXnDr_6cyHbd5reWnfkfp7F3LN19pucWqU
 id: node.field_dwc_stateprovince
 field_name: field_dwc_stateprovince
 entity_type: node

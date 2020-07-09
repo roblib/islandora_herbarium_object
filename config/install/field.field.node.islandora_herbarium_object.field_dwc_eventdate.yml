@@ -1,3 +1,4 @@
+uuid: 86b7d0ca-9056-47cb-b8cc-9acb1a107f9f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.islandora_herbarium_object
   module:
     - datetime
+_core:
+  default_config_hash: E0HqQu8Vb_Cb_iNX97RnNO3XjbHRWVAhb6vfuRJNeE0
 id: node.islandora_herbarium_object.field_dwc_eventdate
 field_name: field_dwc_eventdate
 entity_type: node

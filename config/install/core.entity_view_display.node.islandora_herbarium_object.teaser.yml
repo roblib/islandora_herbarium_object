@@ -1,3 +1,4 @@
+uuid: 2c1ff76e-b028-4e99-95f9-8d47a12f154f
 langcode: en
 status: true
 dependencies:
@@ -29,10 +30,15 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
+    - field.field.node.islandora_herbarium_object.field_member_of
+    - field.field.node.islandora_herbarium_object.field_model
+    - field.field.node.islandora_herbarium_object.field_resource_type
     - node.type.islandora_herbarium_object
   module:
     - text
     - user
+_core:
+  default_config_hash: 2S6Tw8v-10gcQU3vs3S-nikHreVis41zI7-e8q8cfdU
 id: node.islandora_herbarium_object.teaser
 targetEntityType: node
 bundle: islandora_herbarium_object
@@ -46,8 +52,63 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  display_media_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_thumbnail:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  islandora_fits_checksum:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
+  openseadragon_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   field_dc_accessrights: true
@@ -75,3 +136,8 @@ hidden:
   field_dwciri_municipality: true
   field_dwciri_scientificname: true
   field_herb_geo_field: true
+  field_member_of: true
+  field_model: true
+  field_resource_type: true
+  langcode: true
+  search_api_excerpt: true

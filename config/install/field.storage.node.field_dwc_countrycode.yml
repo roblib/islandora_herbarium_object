@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: KPOPHRkp4idZwG_lfwdrUjTsE93slePrMnQGNlH88Uw
+  default_config_hash: RjNFsIznWNkfjcYAFX8IL-38VGuWAFMb1-PKK48HTIY
 id: node.field_dwc_countrycode
 field_name: field_dwc_countrycode
 entity_type: node

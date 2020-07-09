@@ -1,3 +1,4 @@
+uuid: d9b0a6de-60e7-4bb3-85e1-ec13c98c4101
 langcode: en
 status: true
 dependencies:
@@ -5,12 +6,13 @@ dependencies:
     - node.type.islandora_herbarium_object
   module:
     - node
+_core:
+  default_config_hash: exiRc-6vBwi1le9HO_VxUu8skiHrgoFH9AL9Pz1o8YQ
 id: node.islandora_herbarium_object
 targetEntityType: node
 bundle: islandora_herbarium_object
 types:
   - 'pcdm:Object'
-  - 'schema:ImageObject'
 fieldMappings:
   field_dc_accessrights:
     properties:
@@ -34,8 +36,8 @@ fieldMappings:
     properties:
       - 'dwc:recordedBy'
   field_herb_geo_field:
-      properties:
-        - 'dwc:verbatimCoordinates'
+    properties:
+      - 'dwc:verbatimCoordinates'
   field_dwciri_scientificname:
     properties:
       - 'dwciri:scientificName'
@@ -43,44 +45,44 @@ fieldMappings:
     properties:
       - 'dwc:scientificName'
   field_dwc_vernacularName:
-      properties:
-        - 'dwc:vernacularName'
+    properties:
+      - 'dwc:vernacularName'
   field_dwc_specificepithet:
-      properties:
-        - 'dwc:specificepithet'
+    properties:
+      - 'dwc:specificepithet'
   field_dwc_genus:
-      properties:
-        - 'dwc:genus'
+    properties:
+      - 'dwc:genus'
   field_dwc_class:
-      properties:
-        - 'dwc:class'
+    properties:
+      - 'dwc:class'
   field_dwc_kingdom:
-      properties:
-        - 'dwc:kingdom'
+    properties:
+      - 'dwc:kingdom'
   field_dwc_phylum:
-      properties:
-        - 'dwc:phylum'
+    properties:
+      - 'dwc:phylum'
   field_dwc_order:
-      properties:
-        - 'dwc:order'
+    properties:
+      - 'dwc:order'
   field_dwc_family:
-      properties:
-        - 'dwc:family'
+    properties:
+      - 'dwc:family'
   field_dwc_continent:
-      properties:
-        - 'dwc:continent'
+    properties:
+      - 'dwc:continent'
   field_dwc_country:
-      properties:
-        - 'dwc:country'
+    properties:
+      - 'dwc:country'
   field_dwc_stateprovince:
-      properties:
-        - 'dwc:stateprovince'
+    properties:
+      - 'dwc:stateprovince'
   field_dwc_decimallatitude:
-      properties:
-        - 'dwc:decimallatitude'
+    properties:
+      - 'dwc:decimallatitude'
   field_dwc_decimallongitude:
-      properties:
-        - 'dwc:decimallongitude'
+    properties:
+      - 'dwc:decimallongitude'
   field_dwc_eventdate:
     properties:
       - 'dwc:eventDate'

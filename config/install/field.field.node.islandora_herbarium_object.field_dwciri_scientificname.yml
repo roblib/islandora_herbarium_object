@@ -1,9 +1,12 @@
+uuid: 003a9743-305f-412d-89c6-dc3b44642f51
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dwciri_scientificname
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: MJruKHr9-FaOtjBFwbf-uIJ9zYirvK3jFTwZDaM4H28
 id: node.islandora_herbarium_object.field_dwciri_scientificname
 field_name: field_dwciri_scientificname
 entity_type: node

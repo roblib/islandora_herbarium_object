@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: UinuX4n690kWKN9p62vT1jJ1hAvybP8fKTB6DQU4dKY
+  default_config_hash: m89WfoCRIWRhJCgUI4q5a5fNDsBEBX5hurY43p3Ot7U
 id: node.field_dwc_specificepithet
 field_name: field_dwc_specificepithet
 entity_type: node

@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: SEYXoAY5_EShR3DXAB0joQ2NkLbyRrFdJBfobP4H8uM
+  default_config_hash: OSlzkSTHJrcgBcBtKprN8z1ytw-3QVrrkauJrfpGYlY
 id: node.field_dwc_kingdom
 field_name: field_dwc_kingdom
 entity_type: node

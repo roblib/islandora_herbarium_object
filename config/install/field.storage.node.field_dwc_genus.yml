@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: T_0aThQVX7NJVo9BT6Aw2CRIi5a2QbLZ46AzRI9Z10I
+  default_config_hash: '-rOPovEcM7Jy27zqDnmWAvDu9x1wythtBSIH1MExesQ'
 id: node.field_dwc_genus
 field_name: field_dwc_genus
 entity_type: node

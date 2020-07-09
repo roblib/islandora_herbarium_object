@@ -1,9 +1,12 @@
+uuid: f6d9aa25-007b-409c-9402-9f24e1ce5cfb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dc_language
     - node.type.islandora_herbarium_object
+_core:
+  default_config_hash: 0-edtAXu8ZOTMNtqaGfN6_5cFaAvuEP2ktAQa4zsUoM
 id: node.islandora_herbarium_object.field_dc_language
 field_name: field_dc_language
 entity_type: node

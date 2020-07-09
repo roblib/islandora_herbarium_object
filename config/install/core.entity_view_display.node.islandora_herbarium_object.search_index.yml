@@ -1,3 +1,4 @@
+uuid: e90c7d22-be65-441b-b7e1-0b094c1ef6da
 langcode: en
 status: true
 dependencies:
@@ -29,12 +30,17 @@ dependencies:
     - field.field.node.islandora_herbarium_object.field_dwciri_municipality
     - field.field.node.islandora_herbarium_object.field_dwciri_scientificname
     - field.field.node.islandora_herbarium_object.field_herb_geo_field
+    - field.field.node.islandora_herbarium_object.field_member_of
+    - field.field.node.islandora_herbarium_object.field_model
+    - field.field.node.islandora_herbarium_object.field_resource_type
     - node.type.islandora_herbarium_object
   module:
     - datetime
     - geofield_map
     - text
     - user
+_core:
+  default_config_hash: 5ez42C6YDOLvrslBf5B3-lgB_D0nMY3rRYh9PngFc7M
 id: node.islandora_herbarium_object.search_index
 targetEntityType: node
 bundle: islandora_herbarium_object
@@ -44,6 +50,26 @@ content:
     label: hidden
     type: text_default
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_thumbnail:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -253,13 +279,53 @@ content:
     third_party_settings: {  }
     type: geofield_google_map
     region: content
+  islandora_fits_checksum:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  openseadragon_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_dwc_class: true
   field_dwc_phylum: true
   field_dwciri_municipality: true
   field_dwciri_scientificname: true
+  field_member_of: true
+  field_model: true
+  field_resource_type: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,3 +1,4 @@
+uuid: 3a2cda75-aa64-4f06-bbe5-8245cf9b2f67
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
+_core:
+  default_config_hash: QiIN1KTfQBv9SlO4oWVh8Q8RpGSLLG5ZS5LghoNbMKQ
 name: 'Islandora Herbarium Object'
 type: islandora_herbarium_object
 description: 'Islandora Herbarium Object'
