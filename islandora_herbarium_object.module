@@ -57,8 +57,8 @@ function islandora_herbarium_object_entity_presave(EntityInterface $entity) {
       $geo->updateEntity($entity);
     }
     catch (Exception $e) {
-      drupal_set_message(t('There was an error retrieving Geo data. %msg.',
-        ['%msg' => $e->getMessage()]), 'error');
+      \Drupal::messenger()->addError(t('There was an error retrieving Geo data. %msg.',
+        ['%msg' => $e->getMessage()]));
     }
     // Get the taxonomy data.
     try {
@@ -66,8 +66,8 @@ function islandora_herbarium_object_entity_presave(EntityInterface $entity) {
       $taxon->updateEntity($entity);
     }
     catch (Exception $e) {
-      drupal_set_message(t('There was an error retrieving Taxon data. %msg.',
-        ['%msg' => $e->getMessage()]), 'error');
+       \Drupal::messenger()->addError(t('There was an error retrieving Taxon data. %msg.',
+        ['%msg' => $e->getMessage()]));
     }
     $title = $taxon->getValue('canonicalName') . ' - ' . $geo->getValue('name');
     if ($title != ' - ') {

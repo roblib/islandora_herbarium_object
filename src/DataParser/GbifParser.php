@@ -47,12 +47,7 @@ class GbifParser extends DataParser {
     }
     catch (Exception $e) {
       watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
-      drupal_set_message(t('There was an error retrieving Taxon data. %msg. Verify the url is correct %url',
-        [
-          '%msg' => $e->getMessage(),
-          '%url' => $taxoniri[0]['value'],
-        ]), 'error');
-      return;
+      throw ($e);
     }
     $entity->set('field_dwc_scientificname', $this->getValue('canonicalName'));
     $name_arr = explode(' ', $this->getValue('canonicalName'));

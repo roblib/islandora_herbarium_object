@@ -50,9 +50,7 @@ class NrcanParser extends DataParser {
     }
     catch (Exception $e) {
       watchdog_exception('islandora_herbarium_object', $e, 'Error getting dwciri');
-      drupal_set_message(t('There was an error retrieving Municipality data. %msg. Verify the url is correct %url',
-        ['%msg' => $e->getMessage(), '%url' => $dwciri[0]['value']]), 'error');
-      return;
+      throw ($e);
     }
     $entity->set('field_dwc_municipality', $this->getValue('name'));
     // This parser assumes we are in canada.
@@ -68,8 +66,7 @@ class NrcanParser extends DataParser {
       $province = $p_arr['description'];
     }
     catch (Exception $e) {
-      drupal_set_message(t('There was an error retrieving Province data. %msg.',
-        ['%msg' => $e->getMessage()]), 'error');
+      watchdog_exception('islandora_herbarium_object', $e, 'There was an error retrieving Province data');
     }
     $entity->set('field_dwc_stateprovince', $province);
     $point = [
