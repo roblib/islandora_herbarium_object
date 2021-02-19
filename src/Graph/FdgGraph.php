@@ -24,10 +24,10 @@ class FdgGraph extends GraphParser {
     $municipality = ($municipality == NULL || $municipality == 'NULL') ? '' :
       'Filter (?municipality="' . $municipality . '"^^xsd:string)';
     $sparqlQuery = 'SELECT DISTINCT ?municipalityIRI ?scientificNameIRI ?name ?municipality  where  { 
-                         ?s <dwciri:municipality> ?municipalityIRI .
-                         ?s <dwciri:scientificName> ?scientificNameIRI .
-                         ?s <dwc:scientificName> ?name .
-                         ?s <dwc:municipality> ?municipality ' .
+                         ?s <http://rs.tdwg.org/dwc/iri/municipality> ?municipalityIRI .
+                         ?s <http://rs.tdwg.org/dwc/iri/scientificName> ?scientificNameIRI .
+                         ?s <http://rs.tdwg.org/dwc/terms/scientificName> ?name .
+                         ?s <http://rs.tdwg.org/dwc/terms/municipality> ?municipality ' .
       $scientificName . ' ' . $municipality . ' ' .
       '}';
     // TODO: discover or store sparql endpoint somehow.
