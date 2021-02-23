@@ -7,7 +7,7 @@ d3js:
     url: https://github.com/d3/d3/blob/master/LICENSE
     gpl-compatible: true
   js:
-    /libraries/d3/d3.min.js: {}
+    js/d3.v4.min.js: {}
 fdg-graph:
   version: 1.x
   css:
@@ -24,4 +24,4 @@ d3-selection:
     url: https://github.com/d3/d3-selection/blob/master/LICENSE
     gpl-compatible: true
   js:
-    /libraries/d3-selection/d3-selection.min.js: {}
+    js/d3-selection.min.js: {}

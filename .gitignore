@@ -9,4 +9,4 @@ config/install/media_entity.bundle.jp2.yml
 config/install/media_entity.bundle.tn.yml
 config/install/media_entity.bundle.web_content.yml
 config/install/field.storage.node.field_tags.yml
-config/install/core.entity_view_mode.node.search_index
+.DS_Store
