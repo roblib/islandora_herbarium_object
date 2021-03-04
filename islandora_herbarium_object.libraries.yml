@@ -15,6 +15,8 @@ fdg-graph:
       css/fdg-graph.css: {}
   js:
     js/fdg.js: {}
+  dependencies:
+    - core/drupal
 d3-selection:
   remote: https://github.com/d3/d3-selection
   header: true
