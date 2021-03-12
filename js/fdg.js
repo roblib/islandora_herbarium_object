@@ -3,9 +3,9 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
     // only run once:
     if (context == document) {
       var svg = d3.select(".fdg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height");
-
+          width = +svg.attr("width"),
+          height = +svg.attr("height");
+      var radius = 15;
       var color = d3.scaleOrdinal(d3.schemeCategory20);
 
       var simulation = d3.forceSimulation()
@@ -13,7 +13,8 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
           return d.id;
         }).distance(65).strength(1))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("gravity",gravity(0.2));
       var dataPath = "/" + settings.path.currentPath.replace('fdg', 'fdg_json');
       d3.json(dataPath, function (error, graph) {
         if (error) throw error;
@@ -88,13 +89,9 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
               return d.target.y;
             });
 
-          node
-            .attr("cx", function (d) {
-              return d.x;
-            })
-            .attr("cy", function (d) {
-              return d.y;
-            });
+        node
+          .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+          .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
 
           //textElement
           //  .attr("dx", function(d) {return d.x})
@@ -108,7 +105,15 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
               return d.y;
             });
         }
+                
       });
+      
+      function gravity(alpha) {
+        return function(d) {
+            d.y += (d.cy - d.y) * alpha;
+            d.x += (d.cx - d.x) * alpha;
+        };
+      }
 
       function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -126,6 +131,7 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
         d.fx = null;
         d.fy = null;
       }
+
     }
   }
 }
