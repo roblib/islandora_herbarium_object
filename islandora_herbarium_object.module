@@ -41,7 +41,7 @@ function islandora_herbarium_object_rdf_namespaces() {
 function islandora_herbarium_object_theme($existing, $type, $theme, $path) {
   return [
     'fdg_graph' => [
-      'variables' => [],
+      'variables' => ['height' => NULL, 'width' => NULL],
     ],
   ];
 }

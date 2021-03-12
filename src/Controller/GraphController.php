@@ -16,8 +16,12 @@ class GraphController extends ControllerBase {
    *   A renderable array.
    */
   public function printFdgGraph($scientificName = NULL, $municipality = NULL) {
+    $arr = ($scientificName == 'NULL' && $municipality == 'NULL') ? ['height' =>
+      1400, 'width' => 1000] : ['height' => 400, 'width' => 800];
     return [
       '#theme' => 'fdg_graph',
+      '#height' => $arr['height'],
+      '#width' => $arr['width'],
       '#attached' => [
         'library' => [
           'islandora_herbarium_object/d3js',
