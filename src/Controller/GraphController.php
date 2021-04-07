@@ -17,7 +17,7 @@ class GraphController extends ControllerBase {
    */
   public function printFdgGraph($scientificName = NULL, $municipality = NULL) {
     $arr = ($scientificName == 'NULL' && $municipality == 'NULL') ? ['height' =>
-      1400, 'width' => 1000] : ['height' => 400, 'width' => 800];
+      2400, 'width' => 1400] : ['height' => 400, 'width' => 800];
     return [
       '#theme' => 'fdg_graph',
       '#height' => $arr['height'],

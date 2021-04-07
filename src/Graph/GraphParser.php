@@ -24,7 +24,6 @@ class GraphParser implements GraphInterface {
     $outputArr['nodes'] = [];
     $outputArr['links'] = [];
     $idArr = [];
-
     foreach ($jsonArr['results']['bindings'] as $result) {
       if (!array_key_exists($result['municipality']['value'], $idArr)) {
         $outputArr['nodes'][] = [
@@ -35,12 +34,15 @@ class GraphParser implements GraphInterface {
         ];
         $idArr[$result['municipality']['value']] = '';
       }
-      $outputArr['nodes'][] = [
-        'id' => $result['name']['value'],
-        'name' => $result['name']['value'],
-        'uri' => $result['scientificNameIRI']['value'],
-        'group' => 2,
-      ];
+      if (!array_key_exists($result['name']['value'], $idArr)) {
+        $outputArr['nodes'][] = [
+          'id' => $result['name']['value'],
+          'name' => $result['name']['value'],
+          'uri' => $result['scientificNameIRI']['value'],
+          'group' => 2,
+        ];
+        $idArr[$result['name']['value']] = '';
+      }
       $outputArr['links'][] = [
         'target' => $result['municipality']['value'],
         'source' => $result['name']['value'],

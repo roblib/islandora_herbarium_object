@@ -5,16 +5,16 @@ Drupal.behaviors.islandora_herbarium_object_graph = {
       var svg = d3.select(".fdg"),
           width = +svg.attr("width"),
           height = +svg.attr("height");
-      var radius = 15;
+      var radius = 25;
       var color = d3.scaleOrdinal(d3.schemeCategory20);
 
       var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {
           return d.id;
-        }).distance(65).strength(1))
+        }).distance(250).strength(0.5))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("gravity",gravity(0.2));
+        .force("center", d3.forceCenter(width / 2, height / 2));
+        //.force("gravity",gravity(0.2));
       var dataPath = "/" + settings.path.currentPath.replace('fdg', 'fdg_json');
       d3.json(dataPath, function (error, graph) {
         if (error) throw error;
