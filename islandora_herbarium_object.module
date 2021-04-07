@@ -69,7 +69,7 @@ function islandora_herbarium_object_entity_presave(EntityInterface $entity) {
        \Drupal::messenger()->addError(t('There was an error retrieving Taxon data. %msg.',
         ['%msg' => $e->getMessage()]));
     }
-    $title = $taxon->getValue('canonicalName') . ' - ' . $geo->getValue('name');
+    $title = $entity->get('field_dwc_scientificname')->value . ' - ' . $geo->getValue('name');
     if ($title != ' - ') {
       $entity->setTitle($title);
     }
