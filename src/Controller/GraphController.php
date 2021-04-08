@@ -15,7 +15,7 @@ class GraphController extends ControllerBase {
    * @return array
    *   A renderable array.
    */
-  public function printFdgGraph($scientificName = NULL, $municipality = NULL) {
+  public function printFdgGraph($scientificName = NULL, $municipality = NULL, $uri_endpoint = 'source') {
     $arr = ($scientificName == 'NULL' && $municipality == 'NULL') ? ['height' =>
       2400, 'width' => 1400] : ['height' => 400, 'width' => 800];
     return [
@@ -37,10 +37,10 @@ class GraphController extends ControllerBase {
    *
    * TODO: expose as a proper rest endpoint
    */
-  public function printFdgData($scientificName = NULL, $municipality = NULL) {
+  public function printFdgData($scientificName = NULL, $municipality = NULL, $uri_endpoint = 'source') {
     $fdgGraph = \Drupal::service('islandora_herbarium_object.fdggraph');
     $fdgGraph->getData($scientificName, $municipality);
-    $graphJson = $fdgGraph->parseData();
+    $graphJson = $fdgGraph->parseData($uri_endpoint);
     print $graphJson;
     exit();
   }

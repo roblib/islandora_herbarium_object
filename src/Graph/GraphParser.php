@@ -7,7 +7,7 @@
  */
 
 namespace Drupal\islandora_herbarium_object\Graph;
-
+use Drupal\Core\Url;
 
 class GraphParser implements GraphInterface {
 
@@ -17,7 +17,7 @@ class GraphParser implements GraphInterface {
    * @return string
    *   A json encode string.
    */
-  public function parseData() {
+  public function parseData($uri_endpoint = 'source') {
     $jsonArr = json_decode($this->data, TRUE);
     $outputArr = [];
     // $nodes = $links = new \Ds\Set();
@@ -26,19 +26,23 @@ class GraphParser implements GraphInterface {
     $idArr = [];
     foreach ($jsonArr['results']['bindings'] as $result) {
       if (!array_key_exists($result['municipality']['value'], $idArr)) {
+        $municipality_uri = ($uri_endpoint == 'solr') ? Url::fromUri('internal:/herbarium-search?search_api_fulltext=&herbarium-search%5B0%5D=municipality:' .
+          $result['municipality']['value'])->toString() : $result['municipalityIRI']['value'];         
         $outputArr['nodes'][] = [
           'id' => $result['municipality']['value'],
           'name' => $result['municipality']['value'],
-          'uri' => $result['municipalityIRI']['value'],
+          'uri' => $municipality_uri,
           'group' => 1,
         ];
         $idArr[$result['municipality']['value']] = '';
       }
       if (!array_key_exists($result['name']['value'], $idArr)) {
+        $scientific_name_uri = ($uri_endpoint == 'solr') ? Url::fromUri('internal:/herbarium-search?search_api_fulltext=&herbarium-search%5B0%5D=scientific_name:' .
+          $result['name']['value'])->toString() : $result['scientificNameIRI']['value'];    
         $outputArr['nodes'][] = [
           'id' => $result['name']['value'],
           'name' => $result['name']['value'],
-          'uri' => $result['scientificNameIRI']['value'],
+          'uri' => $scientific_name_uri,
           'group' => 2,
         ];
         $idArr[$result['name']['value']] = '';
