@@ -48,9 +48,14 @@ class FdgGraphTextFieldFormatter extends FormatterBase {
       $fieldLabel = str_replace(' ', '_', $field->getLabel());
       $municipality = ($fieldLabel == 'Municipality') ? $item->value : 'NULL';
       $scientificName = ($fieldLabel == 'Scientific_Name') ? $item->value : 'NULL';
-      $link = Link::fromTextAndUrl($item->value, Url::fromroute('islandora_herbarium_object.graph',
-        ['scientificName' => $scientificName, 'municipality' => $municipality]));
-      $element[$delta] = [$link->toRenderable()];
+      $link_fdg_source = Link::fromTextAndUrl("[Force-Directed Graph with Links to Source Data]", Url::fromroute('islandora_herbarium_object.graph',
+        ['scientificName' => $scientificName, 'municipality' => $municipality, 'uri_endpoint' => 'source']));
+      $link_fdg_solr = Link::fromTextAndUrl("[Force-Directed Graph with Links to Solr Search]", Url::fromroute('islandora_herbarium_object.graph',
+        ['scientificName' => $scientificName, 'municipality' => $municipality, 'uri_endpoint' => 'solr']));
+      $link = Link::fromTextAndUrl($item->value, Url::fromroute('view.herbarium_search.page_1',
+        [], ['query' => ['search_api_fulltext' => '','herbarium-search[0]' => $fieldLabel . ':' . $item->value]]));
+      $element[$delta] = [$link->toRenderable(), $link_fdg_solr->toRenderable(),
+        $link_fdg_source->toRenderable()];
     }
 
     return $element;
