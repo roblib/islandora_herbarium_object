@@ -58,7 +58,6 @@ class GbifParser extends DataParser {
     $entity->set('field_dwc_order', $this->getValue('order'));
     $entity->set('field_dwc_family', $this->getValue('family'));
     $entity->set('field_dwc_class', $this->getValue('class'));
-    $entity->set('field_dwc_vernacularname', $this->getValue('vernacularName'));
   }
 
   /**
