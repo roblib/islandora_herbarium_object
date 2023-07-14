@@ -1,8 +1,7 @@
 name: 'Islandora Herbarium Object'
 description: 'Provides Islandora Herbarium Object content type and related configuration. Islandora Herbarium Object'
 type: module
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9.5 || ^10
 dependencies:
   - datetime
   - field
